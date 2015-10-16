@@ -6,7 +6,7 @@ RUN curl -s --retry 3 -L http://lang-jvm.s3.amazonaws.com/maven-3.3.3.tar.gz | t
 RUN chmod +x /app/.maven/bin/mvn
 ENV M2_HOME /app/.maven
 ENV PATH /app/.maven/bin:$PATH
-ADD settings.xml /app/usr/.m2/settings.xml
+
 ENV MAVEN_OPTS "-Xmx1024m -Duser.home=/app/usr -Dmaven.repo.local=/app/.m2/repository"
 
 ENV OPENCV_HOME /app/user/OpenCV/opencv-3.0.0/build/
