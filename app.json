@@ -1,0 +1,5 @@
+{
+  "name": "opencv-test",
+  "image": "heroku/java",
+  "addons": []
+}

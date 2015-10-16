@@ -1,0 +1,19 @@
+web:
+  build: .
+  command: 'bash -c ''java -Xmx768m -Xms384m -Xss512k -XX:+UseCompressedOops -Dspring.profiles.active=$SPRING_PROFILES_ACTIVE -Djava.library.path=$OPENCV_HOME/lib -jar target/opencv-test.jar'''
+  working_dir: /app/user
+  environment:
+    PORT: 8181
+  ports:
+    - '8181:8181'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user
+  environment:
+    PORT: 8181
+  ports:
+    - '8181:8181'
+  volumes:
+    - '.:/app/user'
+

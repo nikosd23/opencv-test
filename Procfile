@@ -1,0 +1,1 @@
+web: java -Xmx768m -Xms384m -Xss512k -XX:+UseCompressedOops -Dspring.profiles.active=$SPRING_PROFILES_ACTIVE -Djava.library.path=$OPENCV_HOME/lib -jar target/opencv-test.jar
